@@ -38,14 +38,13 @@ SECRET_KEY = config_secret_common['django']['secret_key']
 # Application definition
 
 INSTALLED_APPS = [
+    'common.apps.CommonConfig',  
+    'py_board.apps.PyBoardConfig',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
-    'py_board.apps.PyBoardConfig',
-    
     'django.contrib.admin',
 ]
 
@@ -127,6 +126,6 @@ MEDIA_ROOT = join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Auth settings
-# LOGIN_URL = '/sns/login/'
-# LOGIN_REDIRECT_URL = reverse_lazy('sns:contents_home')
-# LOGOUT_REDIRECT_URL= reverse_lazy('sns:login')
+LOGIN_URL = '/common/login/'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL= '/'

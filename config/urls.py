@@ -18,6 +18,7 @@ from django.urls import path, include
 from django.conf.urls.static import static
 
 from config.settings import base, debug
+from py_board import views
 
 # === re_path 패턴 정규식 === #
 # ^ 문자열이 시작할 때
@@ -29,6 +30,8 @@ from config.settings import base, debug
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('py_board/', include('py_board.urls')),
+    path('common/', include('common.urls')),
+    path('', views.index, name='index'),
 ]
 
 # 어떤 URL을 정적으로 추가할래? > MEDIA_URL을 static 파일 경로로 추가

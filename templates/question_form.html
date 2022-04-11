@@ -3,7 +3,7 @@
 {% block contents %}
 <div class="container">
   <h5 class="my-3 border-bottom pb-2">질문등록</h5>
-  <form action="{% url 'py_board:question_create' %}" method="POST">
+  <form method="POST">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit" class="btn btn-primary">저장하기</button>
