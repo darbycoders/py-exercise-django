@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+*$py.class
+
+.vscode
+.config
+
+.DS_Store
+*.sqlite3
+media/
+logs/
+
+**/migrations/**
+!**/migrations
+!**/migrations/__init__.py
